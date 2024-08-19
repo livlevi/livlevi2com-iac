@@ -3,7 +3,7 @@ name: "Terraform Apply for livlev2com website"
 on:
     push:
         branches:
-            -   master
+            -   main
 
 env: 
     TF_CLOUD_ORGANIZATION: "livlevi2com"
