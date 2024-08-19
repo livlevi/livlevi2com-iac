@@ -23,7 +23,7 @@ locals {
 }
 
 module "vpc" {
-    source = "terraform-aws-vpc/"
+    source = "./terraform-aws-vpc/"
 
     name = "livlevi2com-vpc"
     cidr = local.cidr
@@ -39,14 +39,14 @@ module "vpc" {
 }
 
 module "key_pair" {
-    source = "terraform-aws-key-pair/"
+    source = "./terraform-aws-key-pair/"
 
     key_name = "livlevi2com-kp"
     create_private_key = true
 }
 
 module "ec2_instance" {
-    source = "terraform-aws-ec2-instance/"
+    source = "./terraform-aws-ec2-instance/"
 
     name = "livlev2com-websrv"
     instance_type = "t2.micro"
