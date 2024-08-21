@@ -3,7 +3,7 @@ resource "aws_security_group" "livlevi2com-websg" {
     description = "security group for webserver HTTP/S & SSH open"
     vpc_id = module.vpc.vpc_id
 
-    tags = locals.tags
+    tags = local.tags
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_http" {
