@@ -39,14 +39,14 @@ module "vpc" {
 }
 
 module "key_pair" {
-    source = "./terraform-aws-key-pair/"
+    source = "git::https://github.com/terraform-aws-modules/terraform-aws-key-pair.git"
 
     key_name = "livlevi2com-kp"
     create_private_key = true
 }
 
 module "ec2_instance" {
-    source = "./terraform-aws-ec2-instance/"
+    source = "git::https://github.com/terraform-aws-modules/terraform-aws-ec2-instance.git"
 
     name = "livlev2com-websrv"
     instance_type = "t2.micro"
